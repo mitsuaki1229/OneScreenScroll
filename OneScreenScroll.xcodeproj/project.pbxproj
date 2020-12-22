@@ -11,10 +11,13 @@
 		2C820DB6259219C7008F7290 /* TestsMacOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C820DB5259219C7008F7290 /* TestsMacOS.swift */; };
 		2C820DB8259219C7008F7290 /* OneScreenScrollApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C820D8F259219C5008F7290 /* OneScreenScrollApp.swift */; };
 		2C820DB9259219C7008F7290 /* OneScreenScrollApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C820D8F259219C5008F7290 /* OneScreenScrollApp.swift */; };
-		2C820DBA259219C7008F7290 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C820D90259219C5008F7290 /* ContentView.swift */; };
-		2C820DBB259219C7008F7290 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C820D90259219C5008F7290 /* ContentView.swift */; };
 		2C820DBC259219C7008F7290 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C820D91259219C7008F7290 /* Assets.xcassets */; };
 		2C820DBD259219C7008F7290 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2C820D91259219C7008F7290 /* Assets.xcassets */; };
+		2C820DD22592318C008F7290 /* ScrollView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C820DD12592318C008F7290 /* ScrollView.swift */; };
+		2C820DDD25925862008F7290 /* PlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C820DDC25925862008F7290 /* PlayerView.swift */; };
+		2CB2B13A25937D8800B7F85D /* ScreenPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB2B13925937D8800B7F85D /* ScreenPlayerView.swift */; };
+		2CB2B1502596A5B500B7F85D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB2B14F2596A5B500B7F85D /* ContentView.swift */; };
+		2CB2B1512596A5B500B7F85D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CB2B14F2596A5B500B7F85D /* ContentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +39,6 @@
 
 /* Begin PBXFileReference section */
 		2C820D8F259219C5008F7290 /* OneScreenScrollApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OneScreenScrollApp.swift; sourceTree = "<group>"; };
-		2C820D90259219C5008F7290 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2C820D91259219C7008F7290 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2C820D96259219C7008F7290 /* OneScreenScroll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OneScreenScroll.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C820D99259219C7008F7290 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +51,10 @@
 		2C820DB1259219C7008F7290 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C820DB5259219C7008F7290 /* TestsMacOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestsMacOS.swift; sourceTree = "<group>"; };
 		2C820DB7259219C7008F7290 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2C820DD12592318C008F7290 /* ScrollView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScrollView.swift; sourceTree = "<group>"; };
+		2C820DDC25925862008F7290 /* PlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerView.swift; sourceTree = "<group>"; };
+		2CB2B13925937D8800B7F85D /* ScreenPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScreenPlayerView.swift; sourceTree = "<group>"; };
+		2CB2B14F2596A5B500B7F85D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,9 +104,11 @@
 		2C820D8E259219C5008F7290 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				2C820DDB25925819008F7290 /* Player */,
+				2C820DD0259230E8008F7290 /* Scroll */,
 				2C820D8F259219C5008F7290 /* OneScreenScrollApp.swift */,
-				2C820D90259219C5008F7290 /* ContentView.swift */,
 				2C820D91259219C7008F7290 /* Assets.xcassets */,
+				2CB2B14F2596A5B500B7F85D /* ContentView.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -149,6 +157,23 @@
 				2C820DB7259219C7008F7290 /* Info.plist */,
 			);
 			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+		2C820DD0259230E8008F7290 /* Scroll */ = {
+			isa = PBXGroup;
+			children = (
+				2C820DD12592318C008F7290 /* ScrollView.swift */,
+			);
+			path = Scroll;
+			sourceTree = "<group>";
+		};
+		2C820DDB25925819008F7290 /* Player */ = {
+			isa = PBXGroup;
+			children = (
+				2C820DDC25925862008F7290 /* PlayerView.swift */,
+				2CB2B13925937D8800B7F85D /* ScreenPlayerView.swift */,
+			);
+			path = Player;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -330,8 +355,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C820DBA259219C7008F7290 /* ContentView.swift in Sources */,
+				2CB2B13A25937D8800B7F85D /* ScreenPlayerView.swift in Sources */,
+				2CB2B1502596A5B500B7F85D /* ContentView.swift in Sources */,
 				2C820DB8259219C7008F7290 /* OneScreenScrollApp.swift in Sources */,
+				2C820DD22592318C008F7290 /* ScrollView.swift in Sources */,
+				2C820DDD25925862008F7290 /* PlayerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -339,7 +367,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C820DBB259219C7008F7290 /* ContentView.swift in Sources */,
+				2CB2B1512596A5B500B7F85D /* ContentView.swift in Sources */,
 				2C820DB9259219C7008F7290 /* OneScreenScrollApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
