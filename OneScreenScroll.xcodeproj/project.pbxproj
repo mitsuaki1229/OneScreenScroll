@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		2C820DAB259219C7008F7290 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C820DAA259219C7008F7290 /* Tests_iOS.swift */; };
-		2C820DB6259219C7008F7290 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C820DB5259219C7008F7290 /* Tests_macOS.swift */; };
+		2C820DAB259219C7008F7290 /* TestsIOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C820DAA259219C7008F7290 /* TestsIOS.swift */; };
+		2C820DB6259219C7008F7290 /* TestsMacOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C820DB5259219C7008F7290 /* TestsMacOS.swift */; };
 		2C820DB8259219C7008F7290 /* OneScreenScrollApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C820D8F259219C5008F7290 /* OneScreenScrollApp.swift */; };
 		2C820DB9259219C7008F7290 /* OneScreenScrollApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C820D8F259219C5008F7290 /* OneScreenScrollApp.swift */; };
 		2C820DBA259219C7008F7290 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C820D90259219C5008F7290 /* ContentView.swift */; };
@@ -44,10 +44,10 @@
 		2C820DA0259219C7008F7290 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C820DA1259219C7008F7290 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		2C820DA6259219C7008F7290 /* Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2C820DAA259219C7008F7290 /* Tests_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOS.swift; sourceTree = "<group>"; };
+		2C820DAA259219C7008F7290 /* TestsIOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestsIOS.swift; sourceTree = "<group>"; };
 		2C820DAC259219C7008F7290 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C820DB1259219C7008F7290 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		2C820DB5259219C7008F7290 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
+		2C820DB5259219C7008F7290 /* TestsMacOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestsMacOS.swift; sourceTree = "<group>"; };
 		2C820DB7259219C7008F7290 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -136,7 +136,7 @@
 		2C820DA9259219C7008F7290 /* Tests iOS */ = {
 			isa = PBXGroup;
 			children = (
-				2C820DAA259219C7008F7290 /* Tests_iOS.swift */,
+				2C820DAA259219C7008F7290 /* TestsIOS.swift */,
 				2C820DAC259219C7008F7290 /* Info.plist */,
 			);
 			path = "Tests iOS";
@@ -145,7 +145,7 @@
 		2C820DB4259219C7008F7290 /* Tests macOS */ = {
 			isa = PBXGroup;
 			children = (
-				2C820DB5259219C7008F7290 /* Tests_macOS.swift */,
+				2C820DB5259219C7008F7290 /* TestsMacOS.swift */,
 				2C820DB7259219C7008F7290 /* Info.plist */,
 			);
 			path = "Tests macOS";
@@ -161,6 +161,7 @@
 				2C820D92259219C7008F7290 /* Sources */,
 				2C820D93259219C7008F7290 /* Frameworks */,
 				2C820D94259219C7008F7290 /* Resources */,
+				2C820DEA259259C6008F7290 /* Run Script SwiftLint */,
 			);
 			buildRules = (
 			);
@@ -303,6 +304,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		2C820DEA259259C6008F7290 /* Run Script SwiftLint */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script SwiftLint";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if which swiftlint >/dev/null; then\n  swiftlint\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2C820D92259219C7008F7290 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -326,7 +348,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C820DAB259219C7008F7290 /* Tests_iOS.swift in Sources */,
+				2C820DAB259219C7008F7290 /* TestsIOS.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,7 +356,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2C820DB6259219C7008F7290 /* Tests_macOS.swift in Sources */,
+				2C820DB6259219C7008F7290 /* TestsMacOS.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

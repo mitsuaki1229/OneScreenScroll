@@ -6,6 +6,7 @@ Paging scroll one screen at a time.
 ## Requirement
 
 * [Xcode 12.2](https://developer.apple.com/download/)
+* [Swiftlint](https://github.com/realm/SwiftLint)
 
 ## Author
 
